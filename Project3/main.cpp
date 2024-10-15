@@ -1,7 +1,7 @@
-#include "include/AVLTree.hpp"
-#include "include/BinarySearchTree.hpp"
-#include "include/Cat.hpp"
-#include "include/SplayTree.hpp"
+#include "AVLTree.hpp"
+#include "BinarySearchTree.hpp"
+#include "Cat.hpp"
+#include "SplayTree.hpp"
 #include <algorithm>
 #include <fstream>
 #include <iostream>
