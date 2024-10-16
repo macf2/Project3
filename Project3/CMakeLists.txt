@@ -1,13 +1,13 @@
 cmake_minimum_required(VERSION 3.15)
-project(Project3)
+project(project3)
 
 set(CMAKE_CXX_STANDARD 17)
 
-include_directories(.)
+include_directories(include)
 
-add_executable(Project3
+add_executable(project3
         AVLTree.hpp
         BinarySearchTree.hpp
-        main.cpp
+        Cat.hpp
         SplayTree.hpp
-        Cat.hpp)
+        main.cpp)
