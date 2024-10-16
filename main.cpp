@@ -9,6 +9,7 @@
 #include <random>
 #include <sstream>
 #include <vector>
+#include <cstdlib>
 
 /* stuff from project 1 */
 std::vector<Cat> project1() {
