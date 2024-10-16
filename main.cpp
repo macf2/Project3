@@ -72,6 +72,7 @@ std::cout << "bro\n";
 int main()
 {
         /* part 1 */
+        std::cout << "bro\n";
         BinarySearchTree<int> bst;
         SplayTree<int> splay;
         AVLTree<int> avl;
