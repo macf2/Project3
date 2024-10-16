@@ -16,7 +16,7 @@ std::vector<Cat> project1()
         std::stringstream cat_data;
         cat_data << cat_file.rdbuf();
 
-        char *pdata = cat_data.str().begin();
+        char *pdata = cat_data.str().data();
         
         std::vector<Cat> cats;
 
