@@ -12,15 +12,12 @@
 /* stuff from project 1 */
 std::vector<Cat> project1()
 {
-        FILE *pfile = fopen("data/cats_dataset.csv", "r");
-        fseek(pfile, 0, SEEK_END);
-        long sz = ftell(pfile);
-        rewind(pfile);
-        char *pdata = (char *)malloc(sz + 1);
-        pdata[sz] = '\0';
-        fread(pdata, 1, sz, pfile);
-        fclose(pfile);
+        std::ifstream cat_file("data/cats_dataset.csv");
+        std::stringstream cat_data;
+        cat_data << cat_file.rdbuf();
 
+        char *pdata = cat_data.str().begin();
+        
         std::vector<Cat> cats;
 
         while (*pdata++ != '\n')
@@ -65,7 +62,7 @@ std::vector<Cat> project1()
                     Cat(i, pbreed, age, weight, idx_color, idx_gender)
                 );
         }
-        std::cerr << "bro\n";
+        std::cerr << "broooooooo\n";
 
         return cats;
 }
@@ -73,7 +70,6 @@ std::vector<Cat> project1()
 int main()
 {
         /* part 1 */
-        std::cerr << "bro\n";
         BinarySearchTree<int> bst;
         SplayTree<int> splay;
         AVLTree<int> avl;
@@ -107,11 +103,11 @@ int main()
         splay_int_depth.close();
 
         uint32_t d = 0;
-        std::cerr << bst.find(0, &d) << ", " << d << '\n';
+        std::cout << bst.find(0, &d) << ", " << d << '\n';
         d = 0;
-        std::cerr << bst.find(101, &d) << ", " << d << '\n';
+        std::cout << bst.find(101, &d) << ", " << d << '\n';
         d = 0;
-        std::cerr << bst.find(102, &d) << ", " << d << '\n';
+        std::cout << bst.find(102, &d) << ", " << d << '\n';
 
         /* part 2 */
         std::cerr << "bro\n";
@@ -152,8 +148,6 @@ int main()
         splay_rand_int_depth.close();
 
         /* part 3 */
-        std::cerr << "bro\n";
-
         BinarySearchTree<Cat> cat_bst;
         SplayTree<Cat> cat_splay;
         AVLTree<Cat> cat_avl;
@@ -189,8 +183,6 @@ int main()
         cat_avl_depth.close();
 
         /* part 4 */
-        std::cerr << "bro\n";
-
         SplayTree<Cat> cat_splay2;
         std::ofstream cat_splay_depth2("data/splay/cat_depth2.csv");
         for (Cat c : cats)
