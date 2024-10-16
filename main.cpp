@@ -110,7 +110,6 @@ int main()
         std::cout << bst.find(102, &d) << ", " << d << '\n';
 
         /* part 2 */
-        std::cerr << "bro\n";
         BinarySearchTree<int> bst1;
         SplayTree<int> splay1;
         AVLTree<int> avl1;
