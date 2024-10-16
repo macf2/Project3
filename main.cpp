@@ -17,8 +17,7 @@ std::vector<Cat> project1()
         std::stringstream cat_data;
         cat_data << cat_file.rdbuf();
 
-        char *pdata = (char *)malloc(cat_data.str().size());
-        memcpy(pdata, cat_data.str().data(), cat_data.str().size());
+        char *pdata = (char *)cat_data.str().data();
 
         std::vector<Cat> cats;
 
