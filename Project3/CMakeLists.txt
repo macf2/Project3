@@ -3,11 +3,11 @@ project(Project3)
 
 set(CMAKE_CXX_STANDARD 17)
 
-include_directories(include)
+include_directories(.)
 
 add_executable(Project3
-        include/AVLTree.hpp
-        include/BinarySearchTree.hpp
-        include/Cat.hpp
-        include/SplayTree.hpp
+        AVLTree.hpp
+        BinarySearchTree.hpp
+        Cat.hpp
+        SplayTree.hpp
         main.cpp)
