@@ -60,6 +60,7 @@ std::vector<Cat> project1() {
     cats.emplace_back(Cat(i, pbreed, age, weight, idx_color, idx_gender));
   }
 
+  std::cerr << "brooooooo\n";
   return cats;
 }
 
