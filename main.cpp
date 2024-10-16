@@ -65,7 +65,7 @@ std::vector<Cat> project1()
                     Cat(i, pbreed, age, weight, idx_color, idx_gender)
                 );
         }
-
+std::cout << "bro\n";
         return cats;
 }
 
@@ -112,6 +112,7 @@ int main()
         std::cout << bst.find(102, &d) << ", " << d << '\n';
 
         /* part 2 */
+        std::cout << "bro\n";
         BinarySearchTree<int> bst1;
         SplayTree<int> splay1;
         AVLTree<int> avl1;
@@ -149,6 +150,7 @@ int main()
         splay_rand_int_depth.close();
 
         /* part 3 */
+        std::cout << "bro\n";
         BinarySearchTree<Cat> cat_bst;
         SplayTree<Cat> cat_splay;
         AVLTree<Cat> cat_avl;
@@ -184,6 +186,7 @@ int main()
         cat_avl_depth.close();
 
         /* part 4 */
+        std::cout << "bro\n";
         SplayTree<Cat> cat_splay2;
         std::ofstream cat_splay_depth2("data/splay/cat_depth2.csv");
         for (Cat c : cats)
