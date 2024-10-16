@@ -107,11 +107,11 @@ int main()
         splay_int_depth.close();
 
         uint32_t d = 0;
-        std::cout << bst.find(0, &d) << ", " << d << '\n';
+        std::cerr << bst.find(0, &d) << ", " << d << '\n';
         d = 0;
-        std::cout << bst.find(101, &d) << ", " << d << '\n';
+        std::cerr << bst.find(101, &d) << ", " << d << '\n';
         d = 0;
-        std::cout << bst.find(102, &d) << ", " << d << '\n';
+        std::cerr << bst.find(102, &d) << ", " << d << '\n';
 
         /* part 2 */
         std::cerr << "bro\n";
